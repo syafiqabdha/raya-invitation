@@ -2,3 +2,5 @@ name: raya-invitation
 services:
   web:
     build: .
+    ports:
+      - "3000:80"
