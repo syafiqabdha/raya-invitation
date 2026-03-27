@@ -2,10 +2,5 @@ name: raya-invitation
 services:
   web:
     build: .
-    expose:
-      - "80"  # Expose container port without host binding
-    # Optional labels for Coolify/Traefik
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.web.entrypoints=web"
-      - "traefik.http.routers.web.rule=Host(`$(COOLIFY_HOST)`)"
+    ports:
+      - "80:80"
