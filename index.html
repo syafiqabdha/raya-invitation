@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Terbuka Hari Raya Aidilfitri - Muhammad Firdaus & Nor Faizah</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Floraison+des+Amours&family=Coolvetica:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Pattern -->
+        <div class="background-pattern"></div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Host Names -->
+            <h1 class="host-name">Muhammad Firdaus &amp; Nor Faizah</h1>
+            
+            <!-- Main Title -->
+            <h2 class="main-title">Selamat Hari Raya</h2>
+            
+            <!-- Event Details -->
+            <div class="event-details">
+                <div class="detail-item">
+                    <span class="detail-label">Tarikh</span>
+                    <span class="detail-value">4 April 2026</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Hari</span>
+                    <span class="detail-value">Sabtu</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Masa</span>
+                    <span class="detail-value">8:00 PM – 11:00 PM</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Lokasi Majlis</span>
+                    <span class="detail-value">Pusat Konvensyen Bangi (BCC), Seksyen 14, Bandar Baru Bangi.</span>
+                </div>
+            </div>
+            
+            <!-- Google Maps Link -->
+            <div class="map-link">
+                <a href="https://www.google.com/maps/search/Pusat+Konvensyen+Bangi+BBC" target="_blank">
+                    Lihat di Google Maps
+                </a>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <label>Hari</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <label>Jam</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <label>Minit</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <label>Saat</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RSVP Form -->
+            <div class="rsvp-section">
+                <h3 class="rsvp-title">Sila Confirm Kehadiran</h3>
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attendance">Kehadiran</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Sila Pilih</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pax">Bilangan Pax</label>
+                        <input type="number" id="pax" name="pax" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Ucapan Hari Raya</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tulis ucapan Hari Raya anda di sini..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="rsvp-button">Hantar RSVP</button>
+                </form>
+                
+                <div id="formMessage" class="form-message"></div>
+            </div>
+            
+            <!-- Admin Login (Hidden by default) -->
+            <div class="admin-login" style="display: none;">
+                <h3>Admin Login</h3>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminUsername">Username</label>
+                        <input type="text" id="adminUsername" name="adminUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="adminPassword" required>
+                    </div>
+                    <button type="submit" class="admin-button">Log Masuk</button>
+                </form>
+                <div id="adminMessage" class="admin-message"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

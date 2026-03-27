@@ -1,0 +1,9 @@
+# Docker ignore file
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+README.md
+AGENTS.md

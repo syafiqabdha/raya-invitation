@@ -1,0 +1,382 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    background-color: #000080; /* Navy Blue */
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background Pattern */
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 40% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 25%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Container Styles */
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content Styles */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Host Names - Special Font */
+.host-name {
+    font-family: 'Floraison des Amours', cursive;
+    font-size: 2.5rem;
+    color: #d4af37; /* Gold */
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+/* Main Title */
+.main-title {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Event Details */
+.event-details {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-label {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.detail-value {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: right;
+}
+
+/* Map Link */
+.map-link {
+    margin-bottom: 30px;
+}
+
+.map-link a {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #d4af37;
+    text-decoration: none;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+.map-link a:hover {
+    opacity: 0.8;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    width: 100%;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.countdown-item {
+    flex: 1;
+}
+
+.countdown-item span {
+    display: block;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #d4af37;
+    line-height: 1;
+}
+
+.countdown-item label {
+    display: block;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* RSVP Section */
+.rsvp-section {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rsvp-title {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.rsvp-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.rsvp-button:hover {
+    background-color: #c79f30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.rsvp-button:active {
+    transform: translateY(0);
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #90ee90;
+    display: block;
+}
+
+.form-message.error {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #f8d7da;
+    display: block;
+}
+
+/* Admin Login Styles */
+.admin-login {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    width: 100%;
+}
+
+.admin-login h3 {
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Coolvetica', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #c79f30;
+}
+
+.admin-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none;
+}
+
+.admin-message.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #90ee90;
+    display: block;
+}
+
+.admin-message.error {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #f8d7da;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 320px) {
+    .host-name {
+        font-size: 2rem;
+    }
+    
+    .main-title {
+        font-size: 1.7rem;
+    }
+    
+    .countdown-item span {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.content > *:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.content > *:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.content > *:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.content > *:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.content > *:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.content > *:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.content > *:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.content > *:nth-child(8) {
+    animation-delay: 0.8s;
+}
